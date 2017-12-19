@@ -18,7 +18,22 @@ Yes. It is rare to find a p2p service that does not scale. They are distributed 
 
 ## p2p is great, but sometimes you need a single authoritative source of truth
 
-...
+This is not true. Consider git: Each branch could be considered as source of
+truth (or rather "point of truth").
+Branches may depend on eachother, branches may be merged. Branches may _not_
+depend on eachother (git can have multiple "orphan" branches) and may _not_ be
+merged. Still, they are points of truth.
+With p2p systems in a decentralized environment, this is true as well.
+There might never be the _one_ version which is currently the point of truth,
+but as long as versions of the system can be merged, this is not a problem.
+
+Events in such a system can even be sorted chronologically via
+[vector clocks](https://en.wikipedia.org/wiki/Vector_clock)
+where each key is the unique peer hash.
+
+There exists a technology which brings data types to the table which can exist
+in a p2p system without ever needing a single source of truth. These types are
+named [CRDT](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)s.
 
 ## What if nazis take over the p2p network?
 
