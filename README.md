@@ -10,7 +10,19 @@ Yes. It is rare to find a p2p service that does not scale. They are distributed 
 
 ## What about security? Somebody could share a hacked version of a p2p website?
 
-...
+If cryptographic signatures come into play, this is not possible.
+
+Consider a content-addressed system. In such systems, content is addressed via
+a cryptographic hash which represents the content. For example, a file
+containing "Hello World" gets a hash "648a6a6ffff".
+If a peer now tries to fetch content from the network, it does so by asking
+for the content of "648a6a6ffff".
+If it gets sent this content, it can then verify with that same hash,
+whether the content it got is the actual content it requested.
+
+An attacker would be able to host malicious nodes in the network, but as the
+node which _requests_ the content (your node) can verify that it got what it
+expected.
 
 ## What about privacy? Everybody in the p2p network can see what I am looking at.
 
