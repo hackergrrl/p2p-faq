@@ -24,3 +24,10 @@ Yes. It is rare to find a p2p service that does not scale. They are distributed 
 
 ...
 
+## What areas do modern p2p apps still struggle with?
+
+Apps still seem to have a hard time managing resources, like CPU and network
+bandwidth. If an app naively tries to download and replicate ALL of the data it
+sees, it's easy for it to overwhelm the machine it's running on. Many apps still
+have a ways to go in offering good controls for CPU and bandwidth use.
+
