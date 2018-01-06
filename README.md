@@ -1,5 +1,10 @@
 # Peer-to-Peer Frequently Asked Questions
 
+**N.B.** This FAQ focuses on the very nebulous term "p2p system". There's not a
+single answer that maps exactly to *all* peer-to-peer systems; this FAQ does its
+best to provide a general answer when possible, and provide concrete examples
+where it makes sense.
+
 ## Sounds great, but will it scale?
 
 Yes. It is rare to find a p2p service that does not scale. They are distributed
