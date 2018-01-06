@@ -18,7 +18,14 @@ that torrent data to be served grows exponentially.
 
 ## If websites are hosted on p2p, what happens when no peers are online?
 
-...
+The same result as when a centralized website goes down: it isn't available.
+
+The difference is that peer-to-peer networks distribute *the power to host*. I
+could run a peer serving my website on a server. Instantly I have the same
+website availability as a traditional centralized website. The difference is
+that there may be many peers in the swarm that are also hosting my website, so
+if my server goes down, the site will continue to be accessible through those
+seeding peers.
 
 ## What about security? Somebody could share a hacked version of a p2p website?
 
