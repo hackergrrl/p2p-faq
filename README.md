@@ -2,7 +2,12 @@
 
 ## Sounds great, but will it scale?
 
-Yes. It is rare to find a p2p service that does not scale. They are distributed systems by design, and most distributed systems are meant to scale. You could say, then, that many distributed systems take cues from p2p systems in order to scale properly. As a good example, Skype was built by the same engineers who built Kazaa, and Skype internally used p2p distribution in order to alleviate the load from any single node, and to save costs.  
+Yes. It is rare to find a p2p service that does not scale. They are distributed
+systems by design, and most distributed systems are meant to scale. You could
+say, then, that many distributed systems take cues from p2p systems in order to
+scale properly. As a good example, Skype was built by the same engineers who
+built Kazaa, and Skype internally used p2p distribution in order to alleviate
+the load from any single node, and to save costs.
 
 ## If websites are hosted on p2p, what happens when no peers are online?
 
