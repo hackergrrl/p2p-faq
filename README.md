@@ -58,7 +58,7 @@ received from a potentially untrusted source is authentic:
 
 ## 4. What about privacy? Everybody in the p2p network can see what I am looking at.
 
-...
+*TODO*
 
 ## 5. P2P is great, but sometimes you need a single authoritative source of truth
 
