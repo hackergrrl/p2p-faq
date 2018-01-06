@@ -5,7 +5,7 @@ single answer that maps exactly to *all* peer-to-peer systems; this FAQ does its
 best to provide a general answer when possible, and provide concrete examples
 where it makes sense.
 
-## Sounds great, but will it scale?
+## 1. Sounds great, but will it scale?
 
 Yes. It is rare to find a p2p service that does not scale. They are distributed
 systems by design, and most distributed systems are meant to scale. You could
@@ -21,7 +21,7 @@ struggle to initially share to the first wave of peers. Unlike a centralized
 system though, once that first wave of peers downloads a copy, the bandwidth for
 that torrent data to be served grows exponentially.
 
-## If websites are hosted on p2p, what happens when no peers are online?
+## 2. If websites are hosted on p2p, what happens when no peers are online?
 
 The same result as when a centralized website goes down: it isn't available.
 
@@ -32,23 +32,45 @@ that there may be many peers in the swarm that are also hosting my website, so
 if my server goes down, the site will continue to be accessible through those
 seeding peers.
 
-## What about security? Somebody could share a hacked version of a p2p website?
+## 3. What about security? Somebody could share a hacked version of a p2p website?
+
+It depends what the security model of the system hosting the website uses. There
+are two commonly tools I know of for ensuring that a copy of data you've
+received from a potentially untrusted source is authentic:
+
+1. You used the [hash](https://wikipedia.org/Hash_function) of the data to
+   request from the p2p network. If so, the data you receive from a peer can be
+   hashed, and that hash compared against the one used to make the request for
+   the data. [IPFS](https://ipfs.io) and [Secure
+   Scuttlebutt](https://scuttlebutt.nz) do this. A caveat is that the data is
+   static: the hash never changes and thus neither can the data. A benefit is
+   that content-addressable data can be safely cached indefinitely.
+
+2. You used the [public key](https://wikipedia.org/Public_key_cryptography) of
+   the author to request the data from the p2p network. The idea is that every
+   version of the data is cryptographically signed by the data's author, so that
+   any data you download will have a signature can be checked against the public
+   key used to request the data. This guarantees that the data came from the
+   author you expected, and also permits changes to that data, unlike with
+   content-addressed above. [Dat](https://dat-project.org),
+   [IPFS](https://ipfs.io) and [SSB](https://scuttlebutt.nz) all use this
+   approach for dynamic data.
+
+## 4. What about privacy? Everybody in the p2p network can see what I am looking at.
 
 ...
 
-## What about privacy? Everybody in the p2p network can see what I am looking at.
+## 5. P2P is great, but sometimes you need a single authoritative source of truth
 
-...
+If you are cryptographically signing the data you create (see #3), users can
+request your content by your public key. In this way you are able to control
+what data appears in this feed of data, but rely on potentially untrusted peers
+to distributed that data.
 
-## p2p is great, but sometimes you need a single authoritative source of truth
+By introducing a monotonic increasing sequence number to each new entry in the
+signed feed, peers can be assured that no messages were suppressed or censored.
 
-...
-
-## What if nazis take over the p2p network?
-
-...
-
-## What areas do modern p2p apps still struggle with?
+## 6. What areas do modern p2p apps still struggle with?
 
 Apps still seem to have a hard time managing resources, like CPU and network
 bandwidth. If an app naively tries to download and replicate ALL of the data it
