@@ -135,7 +135,25 @@ to distributed that data.
 By introducing a monotonic increasing sequence number to each new entry in the
 signed feed, peers can be assured that no messages were suppressed or censored.
 
-## 6. What areas do modern p2p apps still struggle with?
+## 6. What if p2p technology is used by "bad actors"?
+
+A very common concern with P2P technologies is that they aid crime, piracy,
+pedophilia, and other bad activities. The upside of not having an authority is
+also its unfortunate downside. That said, this aspect of information systems is
+overestimated when compared to other technologies like cars, weapons, hard
+drives, and kitchen cutlery. Terrorist attacks are carried out often through
+cars and common knives, yet it seems absurd to common sense that there would be
+global realtime surveillance of all cars and kitchen knives in order to prevent
+crimes. On the other hand, information systems by themselves cannot directly
+cause any physical harm. The absurdity of censoring cars and cutlery should
+extend also to information systems, or at least the discourse around security
+and crime prevention should get the priorities right and first address the root
+causes, the supporting incentives, the real weapons, and the tradeoffs involved.
+
+More about this:
+https://theintercept.com/2015/11/17/u-s-mass-surveillance-has-no-record-of-thwarting-large-terror-attacks-regardless-of-snowden-leaks/
+
+## 7. What areas do modern p2p apps still struggle with?
 
 Apps still seem to have a hard time managing resources, like CPU and network
 bandwidth. If an app naively tries to download and replicate ALL of the data it
