@@ -5,7 +5,13 @@ single answer that maps exactly to *all* peer-to-peer systems; this FAQ does its
 best to provide a general answer when possible, and provide concrete examples
 where it makes sense.
 
+This FAQ also provides multiple answers per question, from various authors.
+There is no single objective perspective, so more viewpoints are invited: file a
+pull request!
+
 ## 1. Sounds great, but will it scale?
+
+*From [@staltz][staltz]:*
 
 Yes. It is rare to find a p2p service that does not scale. They are distributed
 systems by design, and most distributed systems are meant to scale. You could
@@ -23,7 +29,7 @@ that torrent data to be served grows exponentially.
 
 ## 2. If websites are hosted on p2p, what happens when no peers are online?
 
-*From @noffle:*
+*From [@noffle][noffle]:*
 
 The same result as when a centralized website goes down: it isn't available.
 
@@ -34,7 +40,7 @@ that there may be many peers in the swarm that are also hosting my website, so
 if my server goes down, the site will continue to be accessible through those
 seeding peers.
 
-*From @retrohacker:*
+*From [@retrohacker][retrohacker]:*
 
 Many p2p systems, i.e. BitTorrent, are optimized for sharing popular content.
 The more popular a piece of content, the more available the content becomes. The
@@ -60,7 +66,7 @@ content.
 
 ## 3. What about security? Somebody could share a hacked version of a p2p website?
 
-*From @noffle:*
+*From [@noffle][noffle]:*
 
 It depends what the security model of the system hosting the website uses. There
 are two commonly tools I know of for ensuring that a copy of data you've
@@ -84,7 +90,7 @@ received from a potentially untrusted source is authentic:
    [IPFS](https://ipfs.io) and [SSB](https://scuttlebutt.nz) all use this
    approach for dynamic data.
 
-*From @matthiasbeyer:*
+*From [@matthiasbeyer][matthiasbeyer]:*
 
 If cryptographic signatures come into play, this is not possible.
 
@@ -102,11 +108,11 @@ expected.
 
 ## 4. What about privacy? Everybody in the p2p network can see what I am looking at.
 
-*TODO*
+*Help contribute an answer to this question!*
 
 ## 5. P2P is great, but sometimes you need a single authoritative source of truth
 
-*From @matthiasbeyer:*
+*From [@matthiasbeyer][matthiasbeyer]:*
 
 This is not true. Consider git: Each branch could be considered as source of
 truth (or rather "point of truth").
@@ -125,7 +131,7 @@ There exists a technology which brings data types to the table which can exist
 in a p2p system without ever needing a single source of truth. These types are
 named [CRDT](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)s.
 
-*From @noffle:*
+*From [@noffle][noffle]:*
 
 If you are cryptographically signing the data you create (see #3), users can
 request your content by your public key. In this way you are able to control
@@ -136,6 +142,8 @@ By introducing a monotonic increasing sequence number to each new entry in the
 signed feed, peers can be assured that no messages were suppressed or censored.
 
 ## 6. What if p2p technology is used by "bad actors"?
+
+*From [@staltz][staltz]:*
 
 A very common concern with P2P technologies is that they aid crime, piracy,
 pedophilia, and other bad activities. The upside of not having an authority is
@@ -155,8 +163,16 @@ https://theintercept.com/2015/11/17/u-s-mass-surveillance-has-no-record-of-thwar
 
 ## 7. What areas do modern p2p apps still struggle with?
 
+*From [@noffle][noffle]:*
+
 Apps still seem to have a hard time managing resources, like CPU and network
 bandwidth. If an app naively tries to download and replicate ALL of the data it
 sees, it's easy for it to overwhelm the machine it's running on. Many apps still
 have a ways to go in offering good controls for CPU and bandwidth use.
+
+
+[noffle]: http://git.scuttlebot.io/@C3iYh/12sO1uvKq1KcZXLFxSySzxOkHxXN8rtNB5MGA=.ed25519
+[staltz]: https://github.com/staltz
+[retrohacker]: https://github.com/retrohacker
+[matthiasbeyer]: https://github.com/retrohacker
 
