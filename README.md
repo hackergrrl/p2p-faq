@@ -60,6 +60,8 @@ content.
 
 ## 3. What about security? Somebody could share a hacked version of a p2p website?
 
+*From @noffle:*
+
 It depends what the security model of the system hosting the website uses. There
 are two commonly tools I know of for ensuring that a copy of data you've
 received from a potentially untrusted source is authentic:
@@ -81,6 +83,22 @@ received from a potentially untrusted source is authentic:
    content-addressed above. [Dat](https://dat-project.org),
    [IPFS](https://ipfs.io) and [SSB](https://scuttlebutt.nz) all use this
    approach for dynamic data.
+
+*From @matthiasbeyer:*
+
+If cryptographic signatures come into play, this is not possible.
+
+Consider a content-addressed system. In such systems, content is addressed via
+a cryptographic hash which represents the content. For example, a file
+containing "Hello World" gets a hash "648a6a6ffff".
+If a peer now tries to fetch content from the network, it does so by asking
+for the content of "648a6a6ffff".
+If it gets sent this content, it can then verify with that same hash,
+whether the content it got is the actual content it requested.
+
+An attacker would be able to host malicious nodes in the network, but as the
+node which _requests_ the content (your node) can verify that it got what it
+expected.
 
 ## 4. What about privacy? Everybody in the p2p network can see what I am looking at.
 
