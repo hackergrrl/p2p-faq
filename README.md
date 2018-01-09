@@ -23,6 +23,8 @@ that torrent data to be served grows exponentially.
 
 ## 2. If websites are hosted on p2p, what happens when no peers are online?
 
+*From @noffle:*
+
 The same result as when a centralized website goes down: it isn't available.
 
 The difference is that peer-to-peer networks distribute *the power to host*. I
@@ -31,6 +33,30 @@ website availability as a traditional centralized website. The difference is
 that there may be many peers in the swarm that are also hosting my website, so
 if my server goes down, the site will continue to be accessible through those
 seeding peers.
+
+*From @retrohacker:*
+
+Many p2p systems, i.e. BitTorrent, are optimized for sharing popular content.
+The more popular a piece of content, the more available the content becomes. The
+less popular content is, the less available the content becomes. Popularity in
+this case is the number of peers actively consuming and sharing a piece of
+content. The ability to access any piece of content on a p2p network is limited
+by the availability of peers, no peers no content.
+
+If you share content on a p2p network that you have a vested interest in being
+always-available, you must invest in maintaining your own highly available peers
+that share this content. This is not dissimilar to a centralized network, in
+that you must build highly available infrastructure to share your content.
+However, unlike a centralized network, you're infrastructure is no longer a
+single point of failure since you have the benefit of a p2p network supporting
+you.
+
+In the p2p model, you are not soley responsible for your uptime or performance.
+If your system falls over, consumers of your content can still fetch from
+another peer. If there is a spike in popularity of your content, peers will
+share content amongst eachother reducing the burden on your infrastructure. In
+many cases this can provide a better overall experience for consumers of your
+content.
 
 ## 3. What about security? Somebody could share a hacked version of a p2p website?
 
