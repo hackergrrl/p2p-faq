@@ -158,6 +158,19 @@ extend also to information systems, or at least the discourse around security
 and crime prevention should get the priorities right and first address the root
 causes, the supporting incentives, the real weapons, and the tradeoffs involved.
 
+Another topic to consider the meaning of "bad", and how could *only bad actions* 
+be prevented without preventing good. How could technology-for-freedom empower 
+good actors *without* empowering bad actors? Conversely, how could 
+technology-for-control enable those in power to arrest bad actors without 
+enabling them to arrest good actors?
+
+It's problematic to have this good/bad debate, because it's about moral. Morality
+is culturally-bound, it's relative to the beliefs of a group. Moral in a global 
+tech platform (the Internet) is toxic because it pushes one worldview and chokes 
+pluralism. Our focus therefore should not be on the discussion around morality, 
+it should be around freedom versus control, and how they affect a tech system 
+deployed globally.
+
 More about this:
 https://theintercept.com/2015/11/17/u-s-mass-surveillance-has-no-record-of-thwarting-large-terror-attacks-regardless-of-snowden-leaks/
 
